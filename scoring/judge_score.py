@@ -23,7 +23,7 @@ from pydantic import BaseModel
 from typing import Literal
 
 # Constants
-JUDGE_NUM_EVALS = 512
+JUDGE_NUM_EVALS = int(os.getenv("JUDGE_NUM_EVALS", "512"))
 JUDGE_MAX_TOKENS = 2048
 JUDGE_EVAL_MODEL = "openai/gpt-4o-2024-11-20"
 MAX_ERROR_RATE = 0.1
